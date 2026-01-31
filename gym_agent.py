@@ -42,25 +42,21 @@ def ask_email():
     while True:
         print("\nAgent: To proceed with cancellation, I'll need the email address associated with your membership.")
         user_input = input("You: ").strip().lower()
-        
+
         # 1. TOKEN-LEVEL EXIT CHECK
+        # Splitting prevents 'no' in 'noah@example.com' from triggering an exit.
         input_words = user_input.split()
         exit_keywords = ["no", "cancel", "stop", "exit", "nevermind"]
-        
+
         if any(kw in input_words for kw in exit_keywords) or "never mind" in user_input:
             print("Agent: No problem. Your membership has not been canceled.")
             return None
-        
+
         # 2. EMAIL VALIDATION
         if is_valid_email(user_input):
             return confirm_cancellation(user_input)
-        else:
-            print("Agent: That doesn't look like a valid email address. Please enter a valid email so I can continue.")
-  
-        return ask_email()
-    
-    return confirm_cancellation(user_input)
-    
+
+        print("Agent: That doesn't look like a valid email address. Please enter a valid email so I can continue.")
 
 def confirm_cancellation(email):
     """Final confirmation before cancellation."""
