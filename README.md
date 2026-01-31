@@ -2,7 +2,7 @@
 
 This is a simple conversational assistant to help cancel a gym membership.
 
-It covers conversational design, keyword extraction, relevance classification, and fallback handling based on a FigJam conversation flow.
+It covers conversational design, keyword extraction, relevance classification, and fallback handling based on a [FigJam conversation flow](images/conversation-flow.png).
 
 ## How to run
 ```bash
