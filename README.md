@@ -69,5 +69,5 @@ These examples show how individual assistant messages and short conversational e
 
 ## Design notes
 
-While testing, I noticed that simple keyword matching could incorrectly treat parts of an email address (for example, the "no" in noah@example.com) as an exit command.  
+While testing, I noticed that simple keyword matching could incorrectly treat parts of an email address (for example, the "no" in `noah@example.com`) as an exit command.  
 To avoid this, exit detection was changed to check whole words and the specific phrase "never mind", instead of matching substrings inside the input.
