@@ -37,7 +37,7 @@ During the email collection step, the assistant:
 * validates the email format using a regular expression
 * detects exit commands using whole-word matching (for example: `no`, `cancel`, `stop`, `exit`, `nevermind`) and the explicit phrase "never mind"
 
-This prevents accidental exits when an exit word appears inside a valid email address (for example, `noah@example.com`).
+This prevents accidental exits when an exit keyword (like "no") appears inside a valid email address such as `noah@example.com`.
 
 ### Explicit confirmation checkpoint
 
